@@ -1,0 +1,16 @@
+<style>
+textarea {
+    display: block;
+}
+a.home {
+    margin: 15px 0;
+}
+</style>
+
+<a class="home" href="/">Back to home</a>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>

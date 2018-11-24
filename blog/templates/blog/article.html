@@ -1,0 +1,13 @@
+{% load md2 %}
+<style>
+    a.home {
+        margin: 15px 0;
+    }
+</style>
+<a class="home" href="/">Back to home</a>
+{% if article %}
+<h1>{{ article.title }}</h1>
+<p>{{ article.content |markdown:"safe, code-friendly, code-color" | linebreaks }}</p>
+{% else %}
+<p>This article does not exist</p>
+{% endif %}
